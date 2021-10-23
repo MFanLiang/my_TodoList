@@ -21,7 +21,7 @@ export default class App extends Component {
 		todo.id = nanoid()
 		todo.value = e.target.value.trim();
 		todo.hasCompleted = false;  //标识todo是否已经完成，默认为false未完成
-		todoDatas.push(todo);
+		todoDatas.unshift(todo);
 		todoNums++
 		this.setState({ todoDatas, todoNums })
 		e.target.value = '';
