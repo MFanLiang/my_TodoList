@@ -1,0 +1,25 @@
+{
+    "presets": [ //按需加载指定的模块
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    //让脚手架支持装饰器语法
+    "plugins": [
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ],
+        
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "absoluteRuntime": false,
+                "corejs": 2,
+                "regenerator": true,
+                "useESModules": false
+            }
+        ]
+    ]
+}
